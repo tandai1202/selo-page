@@ -1,0 +1,915 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap");
+
+:root {
+  --yellow-color: #ffca56;
+  --blue-color: #02246a;
+  --black: #2a2b2b;
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  color: #111111;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-family: "Baloo Chettan", cursive;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-family: "Baloo Chettan", cursive;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.3rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-heading {
+  font-size: 4rem;
+  color: var(--blue-color);
+  line-height: 55px;
+}
+
+.text-desc {
+  font-size: 1.7rem;
+  color: #666666;
+  line-height: 28px;
+  padding: 20px 0 40px;
+}
+
+.btn-more {
+  font-size: 1.7rem;
+  background-color: transparent;
+  border: 2px solid var(--yellow-color);
+  color: var(--yellow-color);
+  padding: 13px 0;
+  width: 100%;
+  max-width: 190px;
+  text-align: center;
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 40px;
+  border-radius: 3px;
+}
+
+.btn-more:hover {
+  color: var(--yellow-color);
+  background-color: var(--blue-color);
+  transition: 0.5s all linear;
+}
+
+.input {
+  width: 100%;
+  height: 47px;
+  outline: none;
+  color: #dfdfdf;
+  border: none;
+  border-bottom: 1px solid #02246a;
+  margin-bottom: 25px;
+  padding: 1px 2px;
+  background: transparent;
+  font-size: 1.8rem;
+}
+
+input::placeholder {
+  color: #dfdfdf;
+}
+
+/* Remove Arrows/Spinners input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Remove Arrows/Spinners input number */
+
+.btn-send {
+  margin-top: 30px;
+  padding: 12px 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: var(--yellow-color);
+  color: var(--white);
+  text-transform: uppercase;
+  max-width: 195px;
+  width: 100%;
+  border: none;
+  transition: 0.5s all linear;
+  cursor: pointer;
+}
+
+.btn-send:hover {
+  background-color: var(--blue-color);
+}
+
+/* ============================== BASE ============================== */
+.container {
+  width: 100%;
+  display: block;
+  padding: 0 15px;
+}
+
+.container.wide {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* ============================== HEADER ============================== */
+.header {
+  width: 100%;
+  padding: 30px 30px;
+  position: absolute;
+  z-index: 99;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__menu-list {
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  padding-top: 14px;
+}
+
+.header__menu-item {
+  padding: 0 25px;
+}
+
+.header__menu-link {
+  color: var(--white);
+  font-weight: 500;
+  line-height: 20px;
+  transition: 0.1s linear;
+}
+
+.header__menu-link.active {
+  color: var(--yellow-color);
+  text-decoration: underline;
+}
+
+.header__menu-link:hover {
+  color: var(--yellow-color);
+  text-decoration: underline;
+}
+
+.header__menu-item i {
+  color: var(--white);
+}
+/* ============================== END HEADER ============================== */
+
+/* ============================== BANNER ============================== */
+.banner {
+  background: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  min-height: 900px;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner::before {
+  content: "";
+  background: url(../images/button.png);
+  position: absolute;
+  bottom: -28%;
+  right: 17%;
+  background-repeat: no-repeat;
+  width: 159px;
+  z-index: 99;
+  height: 159px;
+  cursor: pointer;
+}
+
+.banner-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px;
+}
+
+.banner__left {
+  padding-right: 71px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner__left h1 {
+  font-size: 6.3rem;
+  line-height: 73px;
+  color: var(--white);
+  padding-bottom: 30px;
+}
+
+.banner__left p {
+  font-size: 1.5rem;
+  line-height: 28px;
+  font-weight: 500;
+  padding-bottom: 70px;
+  color: var(--white);
+}
+
+.banner__link {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 400;
+  width: 100%;
+  max-width: 215px;
+  padding: 14px 0;
+  border: 2px solid var(--white);
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+}
+
+.banner__link:hover {
+  color: var(--white);
+  background-color: var(--yellow-color);
+  transition: 0.5s all ease;
+}
+
+.banner__right {
+  margin-right: -83px;
+  position: relative;
+}
+
+.banner__right img {
+  border-radius: 3px;
+}
+
+.banner__right h3 {
+  color: var(--white);
+  font-size: 3rem;
+  background-color: var(--yellow-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -26px;
+  left: -28px;
+}
+/* ============================== END BANNER ============================== */
+
+/* ============================== START TEAM ============================== */
+.team-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding-top: 85px;
+}
+
+.team__right,
+.team__left {
+  padding: 0 15px;
+}
+
+.team__right {
+  margin-left: 95px;
+}
+
+.team__right h3 {
+  font-size: 2.4rem;
+  color: var(--yellow-color);
+  line-height: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  float: left;
+}
+
+.team strong {
+  color: var(--blue-color);
+  font-size: 4rem;
+  line-height: 35px;
+  font-weight: bold;
+  margin-top: -5px;
+  padding-left: 50px;
+  display: inline-block;
+}
+
+.team strong span {
+  color: var(--yellow-color);
+}
+
+.team__project {
+  display: flex;
+  align-items: center;
+}
+/* ============================== END TEAM ============================== */
+
+/* ============================== START SERVICES ============================== */
+.services-container {
+  padding-top: 90px;
+  margin-left: 95px;
+}
+
+.services__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: minmax(200px, 300px) 1fr; */
+  gap: 30px;
+}
+
+.services__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 80px 0;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.services__card h3 {
+  color: var(--blue-color);
+  font-size: 2.5rem;
+  line-height: 20px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.services__card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 30px rgb(57 56 56 / 20%);
+  background-color: #fff;
+  border-top: #f8c659 solid 6px;
+  transition: all 0.5s ease-in;
+}
+
+.services__img {
+  background-color: var(--blue-color);
+  height: 143px;
+  width: 143px;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__irro {
+  margin: 40px 150px 0 150px;
+  width: 50px;
+  height: 30px;
+  background-color: var(--blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__irro i {
+  font-size: 1.4rem;
+  color: var(--white);
+}
+/* ============================== END SERVICES ============================== */
+
+/* ============================== STAART IDES ============================== */
+
+.ides-container {
+  padding: 90px 0;
+  position: relative;
+}
+/* 
+.ides-container::before {
+  content: "";
+  background: url(../images/iadius_cross.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 420px;
+  height: 100%;
+} */
+
+.ides__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 0;
+  border: 1px solid #0e0f0f87;
+  box-shadow: 9px 0px 30px rgb(57 56 56 / 20%);
+}
+
+.ides__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ides__card h3 {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: var(--blue-color);
+  width: 180px;
+  height: 180px;
+  border-radius: 100rem;
+  border: 11px solid var(--yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ides__card p {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+/* ============================== END IDES ============================== */
+
+/* ============================== START testimonial ============================== */
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.testimonial__box p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--black);
+  text-align: left;
+  border: 1px solid #bcbcbc;
+  padding: 35px 30px;
+  border-radius: 5px;
+}
+
+.testimonial__icon {
+  display: flex;
+  padding-top: 30px;
+}
+
+.testimonial__icon h4 {
+  padding-left: 13px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.7rem;
+  line-height: 28px;
+  font-weight: 500;
+  color: #030305;
+}
+
+.testimonial__icon h4 span {
+  color: var(--yellow-color);
+}
+
+.testimonial__icon img {
+  border: #02246a solid 9px;
+  border-radius: 100rem;
+}
+/* ============================== END testimonial ============================== */
+
+/* ============================== START CONTACT ============================== */
+.contact {
+  background: url(../images/con_cross.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  margin-top: 90px;
+}
+.contact-container {
+  margin-top: 90px;
+  padding-bottom: 90px;
+}
+
+.contact__heading {
+  padding-bottom: 107px;
+}
+
+.contact__box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+/* ============================== END CONTACT ============================== */
+
+/* ============================== START FOOTER ============================== */
+.footer {
+  background-color: var(--blue-color);
+  padding-top: 115px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer__box p {
+  margin-top: 9px;
+  color: var(--white);
+  font-size: 1.7rem;
+  text-align: left;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.socail-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  font-size: 2.5rem;
+  border-radius: 100rem;
+  margin: 0 3px;
+  color: var(--blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socail-link {
+  color: var(--blue-color);
+  transition: 0.5s all ease;
+}
+
+.socail-link:hover {
+  color: var(--yellow-color);
+}
+
+.footer__text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 25px;
+  color: var(--white);
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--yellow-color);
+  display: table;
+}
+
+.footer-item {
+  height: 38px;
+}
+
+.footer-link {
+  color: var(--white);
+  font-size: 1.7rem;
+  line-height: 28px;
+  padding-bottom: 10px;
+}
+
+.footer__sub {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 32px;
+}
+
+.btn-sub {
+  margin-left: 7px;
+  padding: 8px 0;
+  border-radius: 10px;
+  color: var(--white);
+  background-color: var(--yellow-color);
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  max-width: 163px;
+  width: 100%;
+  height: 46px;
+  cursor: pointer;
+  transition: 0.5s all linear;
+  border: none;
+}
+
+.btn-sub:hover {
+  background-color: var(--black);
+}
+
+.footer-input {
+  border: none;
+  padding: 0 19px;
+  width: 35%;
+  height: 45px;
+  background-color: #fffffff2;
+  color: #c8c8c8;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.footer-input::placeholder {
+  color: var(--black);
+}
+
+.footer__sub h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  padding-top: 12px;
+  margin-right: 93px;
+  text-transform: uppercase;
+}
+
+.copyright {
+  margin-top: 80px;
+  padding-bottom: 20px;
+}
+
+.copyright p {
+  color: #ddd;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  border-top: #a3aec6 solid 1px;
+  padding-top: 25px;
+}
+/* ============================== END FOOTER ============================== */
+
+@media screen and (min-width: 1024px) {
+  .header__menu-mobi-table {
+    display: none;
+  }
+}
+
+/* ============================== TABLE MOBI ============================== */
+
+@media screen and (max-width: 1023.98px) {
+  .text-heading {
+    font-size: 2.8rem;
+    line-height: 37px;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .banner::before {
+    bottom: 19%;
+  }
+
+  .banner-container {
+    padding: 0 50px;
+    gap: unset;
+  }
+
+  .banner__left {
+    padding-right: 71px;
+  }
+
+  .banner__left h1 {
+    font-size: 42px;
+    line-height: 53px;
+    padding-bottom: 10px;
+  }
+
+  .banner__right {
+    margin-right: unset;
+  }
+
+  .team__project {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .team__right h3 {
+    padding-bottom: 30px;
+  }
+
+  .team strong {
+    padding-left: unset;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  /* Header */
+
+  .services__box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ============================== TABLE MOBI ============================== */
+
+/* ============================== TABLE ============================== */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .menu-mobi {
+    display: none;
+  }
+}
+/* ============================== TABLE ============================== */
+
+/* ============================== Mobi ============================== */
+@media (max-width: 739px) {
+  .text-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .header {
+    padding: 30px 0 15px;
+  }
+
+  .header__menu-mobi-table {
+    display: block;
+  }
+
+  .header__menu-list {
+    display: block;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    margin: 0 15px;
+    padding: 0;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.5s all ease-in-out;
+  }
+
+  .header__menu-list.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header__menu-item {
+    padding: 15px 25px;
+  }
+
+  .banner-container {
+    padding: 0 15px;
+    gap: unset;
+  }
+
+  .banner__left {
+    padding-right: unset;
+  }
+
+  .banner__left p {
+    padding-bottom: 30px;
+    width: 100%;
+  }
+
+  .banner__left h1 {
+    font-size: 47px;
+    line-height: 60px;
+    padding-bottom: 10px;
+  }
+
+  .banner__right {
+    margin-top: 40px;
+  }
+
+  .banner__right h3 {
+    width: 60px;
+    height: 60px;
+    top: -21px;
+    left: -10px;
+  }
+
+  .team__project {
+    flex-direction: unset;
+  }
+
+  .team__right {
+    margin-left: unset;
+    padding: 0;
+  }
+
+  .team__right h3 {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+  }
+
+  .team strong {
+    font-size: 2.8rem;
+    padding-left: 28px;
+  }
+
+  .services-container {
+    margin: unset;
+  }
+
+  .contact {
+    background: unset;
+  }
+
+  .contact__rigt {
+    background-color: var(--blue-color);
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .footer__sub {
+    flex-direction: column;
+  }
+
+  .footer-input {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .btn-sub {
+    margin-left: unset;
+  }
+
+  .copyright {
+    margin-top: 30px;
+  }
+
+  .banner-container,
+  .team-container,
+  .testimonial-container,
+  .services__box,
+  .ides__box,
+  .contact__box,
+  .footer-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* ============================== Mobi ============================== */
